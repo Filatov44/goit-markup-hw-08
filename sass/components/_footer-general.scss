@@ -1,0 +1,11 @@
+.footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #2f303a;
+	color: #ffffff;
+	letter-spacing: 0.03em;
+
+	&__general {
+		display: flex;
+	}
+}

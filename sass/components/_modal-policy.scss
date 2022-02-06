@@ -1,0 +1,44 @@
+.modal-policy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+
+	&__txt {
+		display: flex;
+		align-items: center;
+		justify-content: center;  
+		color: #757575;
+
+		.modal-policy__svg {
+			width: 16px;
+			height: 15px;
+			border: 2px solid #000000;
+			border-radius: 2px;
+			margin-right: 7px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__icon {
+		fill: #FFFFFF;
+	}
+
+	&__check:checked + &__txt
+	{
+		.modal-policy__svg {
+			border: none;
+			background-color: var(--accent-color);
+		}
+	}
+
+	&__link {
+		color: var(--accent-color);
+		margin-left: 5px;
+	}
+}
