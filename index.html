@@ -59,70 +59,78 @@
             </li>
           </ul>
         </div>
-		  <!-- Кнопка мобильного меню -->
-		  <button type="button" class="mob-menu__open">
-			  <svg class="mob-menu__open-icon" width="24" height="24" aria-label="Переключатель мобильного меню">
-				  <use class="open-icon__menu" href="./images/symbol-defs.svg#icon-menu"></use>
-			  </svg>
-		  </button>
-      </div>
-      <!-- Окно мобильного меню -->
-      <div class="mob-menu">
-        <div class="mob-container">
-        <div class="mob-menu__top">
-        <button type="button" class="mob-menu__close">
-          <svg class="mob-menu__close-icon" width="24" height="24" aria-label="Переключатель мобильного меню">
-          <use class="close-icon__menu" href="./images/symbol-defs.svg#icon-vectorx"></use>
+        <!-- Кнопка мобильного меню -->
+        <button type="button" class="mob-menu__open" data-menu-open>
+          <svg
+            class="mob-menu__open-icon"
+            width="24"
+            height="24"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="open-icon__menu" href="./images/symbol-defs.svg#icon-menu"></use>
           </svg>
         </button>
-        <ul class="mob-menu__nav list">
-          <li class="mob-menu__nav__item">
-            <a class="mob-menu__nav__link  no-link mob-menu__nav__link-current" href="./index.html">Студия</a>
-          </li>
-          <li class="mob-menu__nav__item">
-            <a class="mob-menu__nav__link  no-link" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="mob-menu__nav__item">
-            <a class="mob-menu__nav__link  no-link" href="">Контакты</a>
-          </li>
-        </ul>
-        </div>
-        <div class="mob-menu__bottom">
-          <ul class="mob-menu__list list">
-            <li class="mob-menu__item">
-              <a class="mob-menu__contact no-link current" href="tel:+380961111111"
-                >+38 096 111 11 11</a
+      </div>
+      <!-- Окно мобильного меню -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
+          <div class="mob-menu__top">
+            <button type="button" class="mob-menu__close" data-menu-close>
+              <svg
+                class="mob-menu__close-icon"
+                width="24"
+                height="24"
+                aria-label="Переключатель мобильного меню"
               >
-            </li>
-            <li class="mob-menu__item">
-              <a class="mob-menu__link no-link" href="mailto:info@devstudio.com">
-                info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="mob-menu__social list">
-            <li class="mob-menu__social-item">
-              <a class="mob-menu__social-link no-link current" href="" target="_blank">
-                Instagram</a
-              >
-            </li>
-            <li class="mob-menu__social-item">
-              <a class="mob-menu__social-link no-link" href="" target="_blank">
-                Twitter</a
-              >
-            </li>
-            <li class="mob-menu__social-item">
-              <a class="mob-menu__social-link no-link" href="" target="_blank">
-                Facebook</a
-              >
-            </li>
-            <li class="mob-menu__social-item">
-              <a class="mob-menu__social-link no-link" href="" target="_blank">
-                Linkedin</a
-              >
-            </li>
-          </ul>
-        </div>
+                <use class="close-icon__menu" href="./images/symbol-defs.svg#icon-vectorx"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__nav list">
+              <li class="mob-menu__nav__item">
+                <a
+                  class="mob-menu__nav__link no-link mob-menu__nav__link-current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__nav__item">
+                <a class="mob-menu__nav__link no-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-menu__nav__item">
+                <a class="mob-menu__nav__link no-link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu__bottom">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__contact no-link current" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link no-link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social list">
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link current" href="" target="_blank">
+                  Instagram</a
+                >
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link" href="" target="_blank"> Twitter</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link" href="" target="_blank"> Facebook</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link" href="" target="_blank"> Linkedin</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -130,7 +138,7 @@
     <main>
       <!--Банер с кнопкой (HERO)-->
       <section class="hero hero__background">
-        <div class="container">
+        <div class="hero__container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button data-modal-open class="hero__button" type="button">Заказать услугу</button>
         </div>
@@ -617,5 +625,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
