@@ -20,22 +20,21 @@
   </head>
   <body>
     <!--Шапка-->
-    <header class="header">
+	 <header class="header">
       <div class="container header-container">
-        <!-------- logo--------->
+        <!------------ logo ------------>
         <a class="logo no-link" href="./index.html"
           ><span class="logo__left-part">Web</span>Studio</a
         >
-        <!-- ---------------navigation--------------- -->
+
+        <!-----------------navigation----------------->
         <nav class="nav">
           <ul class="nav-list list">
             <li class="nav-list__item">
-              <a class="nav-list__link no-link" href="./index.html">Студия</a>
+              <a class="nav-list__link  no-link" href="./index.html">Студия</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link nav-list__current no-link" href="./portfolio.html"
-                >Портфолио</a
-              >
+              <a class="nav-list__link nav-list__current no-link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="nav-list__item"><a class="nav-list__link no-link" href="">Контакты</a></li>
           </ul>
@@ -60,12 +59,88 @@
             </li>
           </ul>
         </div>
+        <!-- Кнопка мобильного меню -->
+        <button type="button" class="mob-menu__open" data-menu-open>
+          <svg
+            class="mob-menu__open-icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="open-icon__menu" href="./images/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Окно мобильного меню -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
+          <div class="mob-menu__top">
+            <button type="button" class="mob-menu__close" data-menu-close>
+              <svg
+                class="mob-menu__close-icon"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="close-icon__menu"
+                  href="./images/symbol-defs.svg#icon-close-mobmenu"
+                ></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__nav list">
+              <li class="mob-menu__nav__item">
+                <a
+                  class="mob-menu__nav__link no-link "
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__nav__item">
+                <a class="mob-menu__nav__link no-link mob-menu__nav__link-current" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-menu__nav__item">
+                <a class="mob-menu__nav__link no-link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu__bottom">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__contact no-link current" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link no-link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social list">
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link current" href="" target="_blank">
+                  Instagram</a
+                >
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link" href="" target="_blank"> Twitter</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link" href="" target="_blank"> Facebook</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link no-link" href="" target="_blank"> Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!--Главный контейнер-->
     <main>
       <!--Фильтр-->
-      <section class="portfolio">
+      <section class="portfolio section-padding">
         <div class="container">
           <ul class="filter-list list">
             <li class="filter-list__item">
@@ -290,6 +365,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__general">
+			<div class="footer-tabl">
           <!-- ---------Footer other---------- -->
           <div class="footer__other">
             <a class="footer__logo no-link" href="./index.html"
@@ -354,6 +430,7 @@
               </li>
             </ul>
           </div>
+			</div>
           <!------------footer-online------------->
           <div class="footer-online">
             <p class="footer-online__title">Подпишитесь на рассылку</p>
@@ -379,5 +456,6 @@
         </div>
       </div>
     </footer>
+	 <script src="./js/menu.js"></script>
   </body>
 </html>
