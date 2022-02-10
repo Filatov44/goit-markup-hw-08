@@ -136,6 +136,8 @@
 	 	(min-resolution: 192dpi),
 	 	(min-resolution: 2dppx) {
 			.hero__background {
+				height: 600px;
+				max-width: 1600px;
 		 	  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		 		 url(../images/header/header_img_pc@2x.jpg);
 				}
