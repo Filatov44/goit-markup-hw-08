@@ -1,4 +1,5 @@
 // .footer {
+	
 // 	padding-top: 60px;
 // 	padding-bottom: 60px;
 // 	background-color: #2f303a;
@@ -9,3 +10,35 @@
 // 		display: flex;
 // 	}
 // }
+
+.footer {
+	background-color: #2f303a;
+	padding-top: 60px;
+ 	padding-bottom: 60px; 
+}
+
+
+@media screen and (min-width: 768px) {
+	.footer-tabl {
+		display: flex;
+    	justify-content: space-between;
+    	padding-left: 76px;
+    	padding-right: 89px;
+	}
+	
+}
+
+
+@media screen and (min-width: 1200px) {
+	.footer__general {
+		display: flex;
+	}
+	.footer-online {
+		margin-top: 0px;
+		margin-left: 93px;
+	}
+	.footer-tabl {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
