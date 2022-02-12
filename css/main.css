@@ -993,6 +993,98 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.service-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.service-wrap__txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-style: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-list {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .service-list {
+    margin: 0;
+  }
+}
+.service-list__item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+.service-list__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-list__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .service-list__item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .service-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .service-list__item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+.service-list__shadow {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.service-list__shadow:hover, .service-list__shadow:focus {
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.service-list__shadow:hover .service-wrap__txt, .service-list__shadow:focus .service-wrap__txt {
+  transform: translateY(0);
+}
+.service-list__description-card {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+.service-list__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--service-title-color);
+}
+.service-list__text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--service-text-color);
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -1014,16 +1106,26 @@ body {
 
 .modal {
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 .modal__close-btn {
   width: 30px;
@@ -1048,10 +1150,19 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (max-width: 1199px) {
+  .modal__title {
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form__field {
@@ -1178,15 +1289,25 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 1200px) {
+  .modal-policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .modal-policy__txt {
-  display: flex;
   align-items: center;
   justify-content: center;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .modal-policy__txt {
+    display: flex;
+  }
 }
 .modal-policy__txt .modal-policy__svg {
   width: 16px;
@@ -1194,9 +1315,14 @@ body {
   border: 2px solid #000000;
   border-radius: 2px;
   margin-right: 7px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .modal-policy__txt .modal-policy__svg {
+    display: flex;
+  }
 }
 .modal-policy__icon {
   fill: #FFFFFF;
@@ -1207,5 +1333,9 @@ body {
 }
 .modal-policy__link {
   color: var(--accent-color);
-  margin-left: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-policy__link {
+    margin-left: 5px;
+  }
 }/*# sourceMappingURL=main.css.map */
